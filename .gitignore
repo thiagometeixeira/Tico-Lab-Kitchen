@@ -1,0 +1,11 @@
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
