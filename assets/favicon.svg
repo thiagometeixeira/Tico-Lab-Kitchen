@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="8" fill="#0f172a"/>
+  <!-- Erlenmeyer flask -->
+  <path d="M13 7h6v3l4.5 9A3 3 0 0 1 20.8 23H11.2a3 3 0 0 1-2.7-4L13 10V7z" stroke="#f8fafc" stroke-width="1.5" stroke-linejoin="round" fill="#1e293b"/>
+  <!-- Measurement marks -->
+  <line x1="14" y1="16" x2="16" y2="16" stroke="#f97316" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="13" y1="19" x2="16" y2="19" stroke="#f97316" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Flame in the neck -->
+  <path d="M16 4c-1.5 2-2.5 3-1.5 5 1 2 2.5 0.5 2.5-1 0.8 1.5 1.8 1 1-1.5-0.5-1.5-1.5-2-2-2.5z" fill="#f97316"/>
+</svg>
