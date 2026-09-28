@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tico Lab Kitchen | Precisão Culinária e Protocolos Gastronômicos</title>
+    <title>Tico Lab Kitchen | Engenharia Gastronômica & Protocolos de Precisão</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
 
-    <!-- Cabeçalho Global -->
+    <!-- Cabeçalho da Marca (Tesla / Thricoma DNA) -->
     <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="brand-link" aria-label="Tico Lab Kitchen Home">
@@ -18,15 +18,15 @@
             
             <nav>
                 <ul class="nav-links">
-                    <li class="nav-item"><a href="#receitas">Receitas</a></li>
-                    <li class="nav-item"><a href="#manifesto">O Método</a></li>
+                    <li class="nav-item"><a href="#protocolos">Protocolos</a></li>
+                    <li class="nav-item"><a href="#dna">DNA do Lab</a></li>
                     <li>
                         <a href="https://github.com/thiagometeixeira/Tico-Lab-Kitchen" 
                            target="_blank" 
                            rel="noopener noreferrer" 
                            class="btn-github">
                             <span>GitHub</span>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
                             </svg>
                         </a>
@@ -36,63 +36,73 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Manifesto -->
     <section class="hero">
         <div class="hero-content">
-            <span class="hero-badge">Culinária com Rigor de Laboratório</span>
-            <h1>Precisão de Laboratório.<br><span>Sabor de Cozinha Autêntica.</span></h1>
-            <p>Um repositório aberto de formulações gastronômicas testadas à exaustão. Sem doses imprecisas, com foco em termodinâmica, proporções estequiométricas e eficiência de bancada.</p>
+            <span class="hero-tagline">MANIFESTO DE ENGENHARIA CULINÁRIA</span>
+            <h1>O Fim do Olhômetro.</h1>
+            <p>
+                Nascemos no laboratório para eliminar a imprecisão que a gastronomia tradicional tolera. 
+                O Tico Lab Kitchen une termodinâmica de cocção, estequiometria de massas e batch prep de alta performance 
+                para criar o ecossistema de receitas mais consistente, replicável e eficiente do Brasil.
+            </p>
             
             <div class="hero-stats">
                 <div class="stat-box">
-                    <div class="stat-number">4</div>
-                    <div class="stat-label">Protocolos Ativos</div>
+                    <div class="stat-number">04</div>
+                    <div class="stat-label">Protocolos Validados</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-number">100%</div>
-                    <div class="stat-label">Pesagem em Gramas</div>
+                    <div class="stat-label">Balança Digital (g)</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">4</div>
-                    <div class="stat-label">Categorias Técnicas</div>
+                    <div class="stat-number">0.0</div>
+                    <div class="stat-label">Margem para Improviso</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Catálogo de Receitas -->
-    <main class="catalog-section" id="receitas">
+    <!-- Catálogo de Protocolos -->
+    <main class="catalog-section" id="protocolos">
         <div class="section-header">
-            <h2 class="section-title">Catálogo de Protocolos</h2>
+            <div class="section-title-wrap">
+                <div>
+                    <p class="section-tagline">CATÁLOGO OPERACIONAL</p>
+                    <h2 class="section-title">Protocolos Homologados</h2>
+                </div>
+            </div>
             
-            <!-- Barra de Filtros -->
+            <!-- Barra de Filtros High-Tech -->
             <div class="category-filters" role="tablist">
-                <button class="filter-btn active" data-filter="all">Todas as Receitas</button>
-                <button class="filter-btn" data-filter="proteinas">Proteínas e Batch Prep</button>
+                <button class="filter-btn active" data-filter="all">Todos os Protocolos</button>
+                <button class="filter-btn" data-filter="proteinas">Proteínas &amp; Batch Prep</button>
                 <button class="filter-btn" data-filter="massas">Massas Clássicas</button>
-                <button class="filter-btn" data-filter="conservas">Molhos e Conservas</button>
-                <button class="filter-btn" data-filter="paes">Pães e Fermentação</button>
+                <button class="filter-btn" data-filter="conservas">Molhos &amp; Conservas</button>
+                <button class="filter-btn" data-filter="paes">Pães &amp; Fermentação</button>
+                <button class="filter-btn" data-filter="sobremesas">Sobremesas</button>
             </div>
         </div>
 
-        <!-- Grade de Cards -->
+        <!-- Grade de Cards / Spec Sheets -->
         <div class="recipes-grid">
 
             <!-- Card 1: Blend de Hambúrguer de Brisket -->
             <article class="recipe-card" data-category="proteinas">
                 <div class="card-header">
-                    <span class="card-tag">Proteínas e Batch Prep</span>
+                    <span class="card-tag">PROTEÍNAS &amp; BATCH PREP</span>
                     <h3 class="card-title">Blend de Hambúrguer de Brisket</h3>
                 </div>
                 <div class="card-body">
-                    <p class="card-description">Moagem técnica de peito bovino com balanço rigoroso de gordura (70/30), técnica de congelamento rápido (flash freeze) para batch prep e selagem de crosta Maillard perfeita.</p>
+                    <p class="card-description">Moagem técnica de peito bovino com controle rígido de gordura (70/30). Protocolo de ultracongelação instantânea (flash freeze) para preservação de suculência e reação de Maillard em chapa a >230°C.</p>
                 </div>
                 <div class="card-footer">
                     <div class="card-meta">
-                        <span>Prep: 40min</span> • <span>Rend: 10 un</span>
+                        <span>PREP: 40MIN</span> • <span>LOTE: 10 UN</span>
                     </div>
                     <a href="receitas/proteinas-e-batch-prep/blend-brisket-burger.html" class="card-cta">
-                        Ver Protocolo →
+                        Acessar Protocolo →
                     </a>
                 </div>
             </article>
@@ -100,18 +110,18 @@
             <!-- Card 2: Spaghetti alla Carbonara Autêntico -->
             <article class="recipe-card" data-category="massas">
                 <div class="card-header">
-                    <span class="card-tag">Massas Clássicas</span>
+                    <span class="card-tag">MASSAS CLÁSSICAS</span>
                     <h3 class="card-title">Spaghetti alla Carbonara Autêntico</h3>
                 </div>
                 <div class="card-body">
-                    <p class="card-description">O cânone da culinária romana: guanciale curado crocante, carbocreme densa, pimenta tostada e emulsão acetinada gerada estritamente pelo calor residual fora do fogo.</p>
+                    <p class="card-description">O cânone romano executado por equilíbrio térmico: renderização de lipídios do guanciale e emulsão de carbocreme estritamente fora do fogo (<65°C) com água rica em amido liberado.</p>
                 </div>
                 <div class="card-footer">
                     <div class="card-meta">
-                        <span>Prep: 10min</span> • <span>Rend: 2 porções</span>
+                        <span>PREP: 10MIN</span> • <span>REND: 2 PORÇÕES</span>
                     </div>
                     <a href="receitas/massas-classicas/spaghetti-carbonara.html" class="card-cta">
-                        Ver Protocolo →
+                        Acessar Protocolo →
                     </a>
                 </div>
             </article>
@@ -119,18 +129,18 @@
             <!-- Card 3: Picles de Jalapeño -->
             <article class="recipe-card" data-category="conservas">
                 <div class="card-header">
-                    <span class="card-tag">Molhos e Conservas</span>
+                    <span class="card-tag">MOLHOS &amp; CONSERVAS</span>
                     <h3 class="card-title">Picles de Jalapeño</h3>
                 </div>
                 <div class="card-body">
-                    <p class="card-description">Conserva em potes esterilizados com salmoura quente balanceada em acidez, açúcar e especiarias aromáticas inteiras. Fatias crocantes com cura controlada.</p>
+                    <p class="card-description">Conserva asséptica em vidro temperado com salmoura quente em proporção 1:1. Choque térmico para preservação do turgor celular, infusão de capsaicina e cura controlada de 48h a 72h.</p>
                 </div>
                 <div class="card-footer">
                     <div class="card-meta">
-                        <span>Prep: 25min</span> • <span>Cura: 48h</span>
+                        <span>PREP: 25MIN</span> • <span>CURA: 48H</span>
                     </div>
                     <a href="receitas/molhos-e-conservas/picles-jalapeno.html" class="card-cta">
-                        Ver Protocolo →
+                        Acessar Protocolo →
                     </a>
                 </div>
             </article>
@@ -138,18 +148,57 @@
             <!-- Card 4: Sourdough Clássico -->
             <article class="recipe-card" data-category="paes">
                 <div class="card-header">
-                    <span class="card-tag">Pães e Fermentação</span>
+                    <span class="card-tag">PÃES &amp; FERMENTAÇÃO</span>
                     <h3 class="card-title">Sourdough Clássico</h3>
                 </div>
                 <div class="card-body">
-                    <p class="card-description">Fórmula base de fermentação natural com 70% de hidratação e farinha forte. Maturação lenta a frio (retardo) e cocção em Dutch oven de ferro fundido.</p>
+                    <p class="card-description">Fórmula base de fermentação biológica selvagem com 70% de hidratação e farinha forte (W > 300). Retardo a frio de 16h em 4°C e cocção sob câmara de vapor em Dutch oven a 250°C.</p>
                 </div>
                 <div class="card-footer">
                     <div class="card-meta">
-                        <span>Prep: 30min</span> • <span>Espera: 24h</span>
+                        <span>PREP: 30MIN</span> • <span>ESPERA: 24H</span>
                     </div>
                     <a href="receitas/paes-e-fermentacao/sourdough-classico.html" class="card-cta">
-                        Ver Protocolo →
+                        Acessar Protocolo →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 5: Focaccia de Fermentação Natural -->
+            <article class="recipe-card" data-category="paes">
+                <div class="card-header">
+                    <span class="card-tag">PÃES &amp; FERMENTAÇÃO</span>
+                    <h3 class="card-title">Focaccia (Levain)</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Massa de alta hidratação baseada no sourdough, enriquecida com azeite. Fermentação a frio e segunda fermentação direta na assadeira para crosta frita e alvéolos largos.</p>
+                </div>
+                <div class="card-footer">
+                    <div class="card-meta">
+                        <span>PREP: 40MIN</span> • <span>ESPERA: 18H+</span>
+                    </div>
+                    <a href="receitas/paes-e-fermentacao/focaccia.html" class="card-cta">
+                        Acessar Protocolo →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 6: Pudim da Kiki -->
+
+            <article class="recipe-card" data-category="sobremesas">
+                <div class="card-header">
+                    <span class="card-tag">SOBREMESAS</span>
+                    <h3 class="card-title">Pudim da Kiki (Tipo Flã)</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Pudim liso de textura delicada sem aroma residual de ovos. Protocolo de homogeneização expressa e cocção em banho-maria controlado a 180°C.</p>
+                </div>
+                <div class="card-footer">
+                    <div class="card-meta">
+                        <span>PREP: 15MIN</span> • <span>ESPERA: 4H+</span>
+                    </div>
+                    <a href="receitas/sobremesas/pudim-da-kiki.html" class="card-cta">
+                        Acessar Protocolo →
                     </a>
                 </div>
             </article>
@@ -157,51 +206,55 @@
         </div>
     </main>
 
-    <!-- Pilares do Laboratório -->
-    <section class="pillars-section" id="manifesto">
-        <div class="pillars-container">
-            <h2 class="pillars-title">Os Três Pilares do Tico Lab</h2>
+    <!-- DNA Tico Lab Kitchen (Grid de Engenharia) -->
+    <section class="technology-section" id="dna">
+        <div class="tech-container">
+            <div class="tech-header">
+                <span class="tech-tagline">DNA TICO LAB KITCHEN</span>
+                <h2 class="tech-title">Ciência Aplicada à Cozinha</h2>
+            </div>
             
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <div class="pillar-icon">⚖️</div>
-                    <h3>1. Gramas, Não Xícaras</h3>
-                    <p>Substituição sistemática de medidas volumétricas por pesagem de precisão em balança digital. Repetibilidade absoluta de texturas e fermentações.</p>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h3>01. Estequiometria em Gramas</h3>
+                    <p>Eliminamos medições volumétricas imprecisas (xícaras, colheres). Cada fórmula é calculada com precisão matemática em gramas e porcentagens de padeiro para repetibilidade absoluta.</p>
                 </div>
 
-                <div class="pillar-card">
-                    <div class="pillar-icon">🔥</div>
-                    <h3>2. Termodinâmica &amp; Maillard</h3>
-                    <p>Controle das temperaturas de emulsão (sem talhar gemas), superfícies de contato (>230°C para caramelização) e choque térmico para conservação celular.</p>
+                <div class="tech-card">
+                    <h3>02. Termodinâmica &amp; Maillard</h3>
+                    <p>Dominamos as curvas térmicas: condução em ferro fundido a >230°C para caramelização máxima, janelas críticas de emulsão para gemas sem coagular (<65°C) e criogenia doméstica.</p>
                 </div>
 
-                <div class="pillar-card">
-                    <div class="pillar-icon">❄️</div>
-                    <h3>3. Batch Prep de Alta Densidade</h3>
-                    <p>Padronização de porções individuais prontas para congelamento rápido (flash freeze) ou cura asséptica, viabilizando excelência gastronômica diária.</p>
+                <div class="tech-card">
+                    <h3>03. Batch Prep de Alta Eficiência</h3>
+                    <p>Desenvolvemos protocolos de produção em lote que eliminam o retrabalho diário. Da padronização de blends para estocagem a vácuo à maturação a frio de massas de alta hidratação.</p>
                 </div>
+            </div>
+
+            <div class="roadmap-strip">
+                <p>ROADMAP: FERMENTAÇÃO CONTROLADA | COZIMENTO SOUS-VIDE | EMULSÕES NANO-ESTÁVEIS | PRESERVAÇÃO MOLECULAR</p>
             </div>
         </div>
     </section>
 
-    <!-- Rodapé Global -->
+    <!-- Rodapé Minimalista High-Tech -->
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <span>🧪 Tico Lab Kitchen</span>
-                <span>•</span>
-                <span>Open Source Culinary Protocols</span>
+                <span>TICO LAB</span>
+                <span class="accent">KITCHEN</span>
+                <span>// ENGENHARIA GASTRONÔMICA DE PRECISÃO</span>
             </div>
             
             <ul class="footer-links">
-                <li><a href="#receitas">Catálogo</a></li>
-                <li><a href="#manifesto">Manifesto</a></li>
-                <li><a href="https://github.com/thiagometeixeira/Tico-Lab-Kitchen" target="_blank" rel="noopener noreferrer">Repositório GitHub</a></li>
+                <li><a href="#protocolos">Protocolos</a></li>
+                <li><a href="#dna">DNA</a></li>
+                <li><a href="https://github.com/thiagometeixeira/Tico-Lab-Kitchen" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             </ul>
         </div>
     </footer>
 
-    <!-- Script de Filtro Leve e Sem Dependências -->
+    <!-- Script de Filtro Leve -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const filterBtns = document.querySelectorAll('.filter-btn');
@@ -209,13 +262,11 @@
 
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    // Atualiza estado ativo nos botões
                     filterBtns.forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
 
                     const category = btn.getAttribute('data-filter');
 
-                    // Filtra os cards
                     recipeCards.forEach(card => {
                         if (category === 'all' || card.getAttribute('data-category') === category) {
                             card.style.display = 'flex';
