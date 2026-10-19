@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
   <defs>
-    <linearGradient id="favMetal" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#94a3b8"/>
-      <stop offset="50%" stop-color="#334155"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+    <linearGradient id="aco" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4f4f5"/>
+      <stop offset="0.35" stop-color="#a1a1aa"/>
+      <stop offset="0.6" stop-color="#e4e4e7"/>
+      <stop offset="1" stop-color="#52525b"/>
     </linearGradient>
+    <linearGradient id="corpo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#26262c"/>
+      <stop offset="1" stop-color="#0b0b0e"/>
+    </linearGradient>
+    <radialGradient id="fundoHex" cx="0.5" cy="0.25" r="0.8">
+      <stop offset="0" stop-color="#1c1c22"/>
+      <stop offset="1" stop-color="#050507"/>
+    </radialGradient>
   </defs>
-  <rect width="32" height="32" rx="7" fill="#000000"/>
-  
-  <!-- Faceted T Mark -->
-  <path d="M4 8 L16 3 L28 8 L22 8 L22 25 L16 29 L10 25 L10 8 Z" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
-  
-  <polygon points="4,8 16,3 16,7 8,10" fill="#cbd5e1" />
-  <polygon points="16,3 28,8 24,10 16,7" fill="#475569" />
-  <polygon points="10,10 16,7 16,26 10,23" fill="url(#favMetal)" />
-  <polygon points="16,7 22,10 22,23 16,26" fill="#1e293b" />
-  
-  <!-- Thermal Core Line -->
-  <line x1="16" y1="7" x2="16" y2="26" stroke="#ff6600" stroke-width="1.8" stroke-linecap="round"/>
+  <rect width="100" height="100" rx="20" fill="#000"/>
+  <path d="M6 8 H94 L86 32 H61 V80 L50 94 L39 80 V32 H14 Z" fill="url(#corpo)" stroke="url(#aco)" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M15.5 15 H84.5 L80.5 26 H55 V77.5 L50 84 L45 77.5 V26 H19.5 Z" fill="none" stroke="#ff6600" stroke-width="4" stroke-linejoin="round"/>
 </svg>

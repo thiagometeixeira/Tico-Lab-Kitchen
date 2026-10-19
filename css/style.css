@@ -117,12 +117,58 @@ a:hover {
 .brand-link {
     display: flex;
     align-items: center;
+    gap: 0.85rem;
     text-decoration: none;
+    color: var(--text-white);
 }
 
-.header-logo {
-    height: 40px;
-    width: auto;
+.brand-link:hover {
+    color: var(--text-white);
+}
+
+.brand-mark {
+    height: 52px;
+    width: 52px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 10px rgba(255, 102, 0, 0.25));
+    transition: filter var(--trans-smooth), transform var(--trans-smooth);
+}
+
+.brand-link:hover .brand-mark {
+    filter: drop-shadow(0 0 14px rgba(255, 102, 0, 0.5));
+    transform: translateY(-1px);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.brand-name {
+    font-size: 1.35rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.brand-light {
+    font-weight: 300;
+    color: var(--text-silver);
+}
+
+.brand-accent {
+    color: var(--orange-primary);
+}
+
+.brand-sub {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    margin-top: 0.3rem;
 }
 
 .nav-links {
@@ -146,7 +192,8 @@ a:hover {
     color: var(--orange-primary);
 }
 
-.btn-github {
+.btn-github,
+.btn-voltar {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -162,42 +209,16 @@ a:hover {
     transition: all var(--trans-fast);
 }
 
-.btn-github:hover {
+.btn-voltar {
+    font-family: var(--font-mono);
+    white-space: nowrap;
+}
+
+.btn-github:hover,
+.btn-voltar:hover {
     border-color: var(--orange-primary);
     box-shadow: var(--orange-glow);
     transform: translateY(-1px);
-}
-
-/* --------------------------------------------------------------------------
-   4. Breadcrumb (Navegação Interna)
-   -------------------------------------------------------------------------- */
-.breadcrumb {
-    max-width: 1080px;
-    margin: 2rem auto 0 auto;
-    padding: 0 1.5rem;
-}
-
-.breadcrumb a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.825rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--text-gray);
-    background-color: var(--black-surface);
-    border: 1px solid var(--border-dark);
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-sm);
-    transition: all var(--trans-fast);
-}
-
-.breadcrumb a:hover {
-    color: var(--orange-primary);
-    border-color: var(--orange-primary);
-    background-color: var(--black-card);
-    transform: translateX(-3px);
 }
 
 /* --------------------------------------------------------------------------
@@ -206,7 +227,7 @@ a:hover {
 .receita-container {
     max-width: 1080px;
     width: 100%;
-    margin: 1.5rem auto 4rem auto;
+    margin: 2.5rem auto 4rem auto;
     padding: 0 1.5rem;
     flex: 1;
 }
@@ -340,7 +361,7 @@ a:hover {
     border-radius: var(--radius-lg);
     padding: 2rem;
     position: sticky;
-    top: 5.5rem;
+    top: 7rem;
 }
 
 .ingredientes h2 {
@@ -481,21 +502,43 @@ a:hover {
 .hero {
     background-color: var(--black-void);
     border-bottom: 1px solid var(--border-dark);
-    padding: 6rem 1.5rem 5rem 1.5rem;
+    padding: 4.5rem 1.5rem 5rem 1.5rem;
     text-align: center;
     position: relative;
 }
 
+.hero {
+    overflow: hidden;
+}
+
+/* Colmeia sutil ao fundo (eco do emblema), apagando nas bordas */
 .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27.71' height='48'%3E%3Cpath d='M0 -16 L13.86 -8 L13.86 8 L0 16 L-13.86 8 L-13.86 -8 Z M27.71 -16 L41.57 -8 L41.57 8 L27.71 16 L13.86 8 L13.86 -8 Z M13.86 8 L27.71 16 L27.71 32 L13.86 40 L0 32 L0 16 Z M0 32 L13.86 40 L13.86 56 L0 64 L-13.86 56 L-13.86 40 Z M27.71 32 L41.57 40 L41.57 56 L27.71 64 L13.86 56 L13.86 40 Z' fill='none' stroke='%23ffffff' stroke-opacity='0.05' stroke-width='1'/%3E%3C/svg%3E");
+    -webkit-mask-image: radial-gradient(ellipse 60% 70% at 50% 30%, #000 0%, transparent 75%);
+    mask-image: radial-gradient(ellipse 60% 70% at 50% 30%, #000 0%, transparent 75%);
+    pointer-events: none;
+}
+
+.hero::after {
     content: '';
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 600px;
-    height: 250px;
-    background: radial-gradient(circle, rgba(255, 102, 0, 0.08) 0%, transparent 70%);
+    width: 700px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(255, 102, 0, 0.1) 0%, transparent 65%);
     pointer-events: none;
+}
+
+.hero-mark {
+    width: clamp(120px, 16vw, 180px);
+    height: auto;
+    margin: 0 auto 2.25rem auto;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 24px rgba(255, 102, 0, 0.22));
 }
 
 .hero-content {
@@ -751,11 +794,42 @@ a:hover {
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
+}
+
+/* Só a seta se move: transform no próprio link quebraria o ::after que cobre o card */
+.cta-arrow {
+    display: inline-block;
     transition: transform var(--trans-fast);
 }
 
-.recipe-card:hover .card-cta {
+.recipe-card:hover .cta-arrow {
     transform: translateX(4px);
+}
+
+/* O link do card se estende sobre o card inteiro (card todo clicável) */
+.card-cta::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.recipe-card {
+    cursor: pointer;
+}
+
+/* Âncoras não ficam escondidas sob o cabeçalho fixo */
+[id] {
+    scroll-margin-top: 6rem;
+}
+
+.recipe-card:focus-within {
+    border-color: var(--orange-primary);
+    box-shadow: var(--orange-glow);
+}
+
+.card-cta:focus-visible {
+    outline: none;
 }
 
 /* --------------------------------------------------------------------------
@@ -913,24 +987,48 @@ a:hover {
         padding: 0.8rem 1.25rem;
     }
 
+    .brand-mark {
+        height: 42px;
+        width: 42px;
+    }
+
+    .brand-name {
+        font-size: 1.05rem;
+        letter-spacing: 1.5px;
+    }
+
+    .brand-sub,
+    .nav-item {
+        display: none;
+    }
+
+    .recipes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-section {
+        padding: 0 1.25rem;
+    }
+
     .hero {
         padding: 4rem 1.25rem 3rem 1.25rem;
     }
 
     .hero-stats {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        padding: 1.25rem 0;
     }
 
     .stat-box {
-        border-right: none;
-        border-bottom: 1px solid var(--border-dark);
-        padding-bottom: 1rem;
+        padding: 0 0.4rem;
     }
 
-    .stat-box:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
+    .stat-number {
+        font-size: 1.6rem;
+    }
+
+    .stat-label {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
     }
 
     .receita-header {

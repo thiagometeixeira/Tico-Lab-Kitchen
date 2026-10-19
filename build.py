@@ -248,11 +248,15 @@ def render_pagina(r):
         for campo, rotulo in ((c, CAMPOS_META[c]) for c in r if c in CAMPOS_META)
     ]
 
+    # Sem foto, o bloco da imagem não é exibido (imagem_placeholder fica só como lembrete no JSON).
+    imagem = []
     if r.get("imagem"):
-        imagem = f'            <img src="../../{esc_attr(r["imagem"])}" alt="{esc_attr(r["titulo"])}">'
-    else:
-        texto = r.get("imagem_placeholder", f"[Inserir foto de {r['titulo']} aqui]")
-        imagem = f"            <span>{esc(texto)}</span>"
+        imagem = [
+            "        <div class=\"imagem-placeholder\">",
+            f'            <img src="../../{esc_attr(r["imagem"])}" alt="{esc_attr(r["titulo"])}">',
+            "        </div>",
+            "",
+        ]
 
     ingr = ["                <h2>Ingredientes</h2>"]
     for grupo, itens in _grupos(r["ingredientes"]):
@@ -301,9 +305,18 @@ def render_pagina(r):
         "</head>",
         "<body>",
         "    <!-- GERADO por build.py a partir de data/receitas/" + r["slug"] + ".json. Não edite à mão. -->",
-        '    <nav class="breadcrumb">',
-        '        <a href="../../index.html">← Voltar para o Tico Lab Kitchen</a>',
-        "    </nav>",
+        '    <header class="site-header">',
+        '        <div class="header-container">',
+        '            <a href="../../index.html" class="brand-link" aria-label="Tico Lab Kitchen Home">',
+        '                <img src="../../assets/logo-mark.svg" alt="" class="brand-mark">',
+        '                <span class="brand-text">',
+        '                    <span class="brand-name">TICO <span class="brand-light">LAB</span> <span class="brand-accent">KITCHEN</span></span>',
+        '                    <span class="brand-sub">Engenharia Gastronômica</span>',
+        "                </span>",
+        "            </a>",
+        '            <a href="../../index.html#protocolos" class="btn-voltar">← Protocolos</a>',
+        "        </div>",
+        "    </header>",
         "",
         '    <article class="receita-container">',
         '        <header class="receita-header">',
@@ -316,11 +329,7 @@ def render_pagina(r):
         "            </div>",
         "        </header>",
         "",
-        "        <!-- Espaço para imagem (opcional) -->",
-        '        <div class="imagem-placeholder">',
-        imagem,
-        "        </div>",
-        "",
+        *imagem,
         '        <div class="grid-receita">',
         '            <aside class="ingredientes">',
         *ingr,
@@ -357,7 +366,7 @@ def render_card(n, r):
         f"                        <span>PREP: {esc(valor_card(r['prep']))}</span> • <span>{esc(rotulo)}: {esc(valor_card(r[campo]))}</span>",
         "                    </div>",
         f'                    <a href="{caminho_pagina(r)}" class="card-cta">',
-        "                        Acessar Protocolo →",
+        "                        Acessar Protocolo <span class=\"cta-arrow\">→</span>",
         "                    </a>",
         "                </div>",
         "            </article>",

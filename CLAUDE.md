@@ -11,7 +11,7 @@ build.py                    ← gerador (python build.py / python build.py --che
 index.html                  ← página inicial; os cards e o total de receitas do hero são gerados
 receitas/<categoria>/<slug>.html  ← páginas GERADAS (commitadas, pois o site é estático)
 css/style.css               ← único CSS do site
-assets/                     ← logo.svg e favicon.svg
+assets/                     ← logo-mark.svg (emblema T, usado no cabeçalho e hero), logo.svg (marca completa, uso externo) e favicon.svg
 ```
 
 ## Regras
@@ -19,7 +19,7 @@ assets/                     ← logo.svg e favicon.svg
 1. **O JSON é a fonte de verdade.** Qualquer mudança de conteúdo de receita é feita em `data/receitas/<slug>.json`.
 2. **Os HTMLs de receita são gerados. Não edite à mão** `receitas/**/*.html` nem o trecho do `index.html` entre `<!-- RECEITAS:INICIO -->` e `<!-- RECEITAS:FIM -->` (nem o número entre `<!-- RECEITAS:TOTAL -->` e `<!-- /RECEITAS:TOTAL -->` no hero). O que estiver fora dos marcadores no `index.html` (hero, filtros, "DNA do Lab", rodapé) é editado à mão normalmente.
 3. **Nunca invente nem "melhore" conteúdo culinário** (quantidades, tempos, temperaturas, proporções, rendimentos, passos). Se algo parecer errado ou divergente, aponte e pergunte ao dono do repo; não escolha sozinho.
-4. O HTML gerado usa as classes existentes do `style.css`. Não mude o CSS para acomodar o gerador.
+4. O HTML gerado usa as classes do `style.css`. O cabeçalho da marca é o mesmo no index e nas receitas (mudou um, mude o outro no `build.py`). Os cards do index são inteiros clicáveis via `.card-cta::after`; não aplique `transform` no `.card-cta` (quebra a área clicável), anime só a `.cta-arrow`.
 5. Sempre rode `python build.py --check` antes de commitar. Ele falha se algum HTML estiver desatualizado em relação aos JSONs ou se existir página em `receitas/` sem JSON correspondente.
 
 ## Fluxo: nova receita
@@ -46,8 +46,8 @@ assets/                     ← logo.svg e favicon.svg
 | `titulo_processo` | não | Título da seção de passos (padrão: `O Processo`). |
 | `passos` | sim | Lista de `{"titulo", "texto"}`, ou grupos `{"grupo": "Dia 1", "itens": [...]}` (a numeração continua entre grupos). Prefira durações ("deixe descansar 1 hora", "dobras a cada 30 min") a horários de relógio. |
 | `notas` | não | Lista de observações exibidas após os passos. |
-| `imagem` | não | Caminho a partir da raiz, ex.: `assets/fotos/pudim.jpg`. Sem ele, aparece o placeholder. |
-| `imagem_placeholder` | não | Texto do placeholder da foto. |
+| `imagem` | não | Caminho a partir da raiz, ex.: `assets/fotos/pudim.jpg`. Sem ele, a página não exibe bloco de foto. |
+| `imagem_placeholder` | não | Lembrete de qual foto tirar; não é exibido no site. |
 | `ordem` | não | Ordem do card no index (menor primeiro). |
 | `destaque` | não | `true`/`false`, reservado para uso futuro. |
 

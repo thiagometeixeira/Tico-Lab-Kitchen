@@ -1,122 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" fill="none">
-  <defs>
-    <!-- Gradientes Metálicos Tesla / Gunmetal -->
-    <linearGradient id="metalBevelTop" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#8e9aa8"/>
-      <stop offset="50%" stop-color="#4a5568"/>
-      <stop offset="100%" stop-color="#1a202c"/>
-    </linearGradient>
-
-    <linearGradient id="metalBevelLeft" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#64748b"/>
-      <stop offset="100%" stop-color="#1e293b"/>
-    </linearGradient>
-
-    <linearGradient id="metalBevelRight" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#334155"/>
-      <stop offset="70%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#020617"/>
-    </linearGradient>
-
-    <!-- Gradiente Laranja Térmico / Thricoma DNA -->
-    <linearGradient id="thermalOrange" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff8533"/>
-      <stop offset="50%" stop-color="#ff6600"/>
-      <stop offset="100%" stop-color="#cc5200"/>
-    </linearGradient>
-
-    <!-- Brilho Eletro-Térmico -->
-    <filter id="thermalGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ff6600" flood-opacity="0.6"/>
-    </filter>
-  </defs>
-
-  <!-- ================= EMBLEMA "T" FACETADO HI-TECH ================= -->
-  <g transform="translate(10, 8)">
-    <!-- Base / Sombra do Emblema -->
-    <path d="M4 14 L32 2 L60 14 L44 14 L44 54 L32 64 L20 54 L20 14 Z" 
-          fill="#0a0a0c" />
-
-    <!-- Faceta Superior Asa Esquerda (Aço Escovado Iluminado) -->
-    <polygon points="4,14 32,2 32,10 12,18" 
-             fill="url(#metalBevelTop)" />
-
-    <!-- Faceta Superior Asa Direita (Bisel Sombreado) -->
-    <polygon points="32,2 60,14 52,18 32,10" 
-             fill="url(#metalBevelRight)" />
-
-    <!-- Asa Esquerda - Corpo Angular Cybertruck -->
-    <polygon points="4,14 12,18 20,18 20,24 8,24" 
-             fill="#334155" />
-
-    <!-- Asa Direita - Corpo Angular -->
-    <polygon points="60,14 52,18 44,18 44,24 56,24" 
-             fill="#1e293b" />
-
-    <!-- Tronco Central Esquerdo - Aresta de Faca / Lâmina de Precisão -->
-    <polygon points="20,18 32,10 32,58 20,50" 
-             fill="url(#metalBevelLeft)" />
-
-    <!-- Tronco Central Direito - Chanfro Escuro de Titânio -->
-    <polygon points="32,10 44,18 44,50 32,58" 
-             fill="url(#metalBevelRight)" />
-
-    <!-- Chanfro Inferior Chisel Cut (Estilo Thricoma / Tesla) -->
-    <polygon points="20,50 32,58 32,64 16,52" 
-             fill="#1e293b" />
-    <polygon points="32,58 44,50 48,54 32,64" 
-             fill="#090d16" />
-
-    <!-- Núcleo Hi-Tech: Aresta Linear de Calor Térmico (Laser Culinary Filament) -->
-    <line x1="32" y1="10" x2="32" y2="58" 
-          stroke="url(#thermalOrange)" stroke-width="2.5" stroke-linecap="round" filter="url(#thermalGlow)" />
-    
-    <!-- Micro Linhas de Calibração / Medição de Precisão (DNA Lab) -->
-    <line x1="26" y1="28" x2="30" y2="28" stroke="#ff8533" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
-    <line x1="24" y1="36" x2="30" y2="36" stroke="#ff8533" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
-    <line x1="26" y1="44" x2="30" y2="44" stroke="#ff8533" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" fill="none" role="img" aria-label="Tico Lab Kitchen">
+  <rect width="520" height="120" fill="#000"/>
+  <g transform="translate(14 10)">
+    <defs>
+      <linearGradient id="aco" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#f4f4f5"/>
+        <stop offset="0.35" stop-color="#a1a1aa"/>
+        <stop offset="0.6" stop-color="#e4e4e7"/>
+        <stop offset="1" stop-color="#52525b"/>
+      </linearGradient>
+      <linearGradient id="corpo" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#26262c"/>
+        <stop offset="1" stop-color="#0b0b0e"/>
+      </linearGradient>
+      <radialGradient id="fundoHex" cx="0.5" cy="0.25" r="0.8">
+        <stop offset="0" stop-color="#1c1c22"/>
+        <stop offset="1" stop-color="#050507"/>
+      </radialGradient>
+      <pattern id="colmeia" width="4.503" height="7.800" patternUnits="userSpaceOnUse"><path d="M0.00 -2.60 L2.25 -1.30 L2.25 1.30 L0.00 2.60 L-2.25 1.30 L-2.25 -1.30 Z M4.50 -2.60 L6.75 -1.30 L6.75 1.30 L4.50 2.60 L2.25 1.30 L2.25 -1.30 Z M2.25 1.30 L4.50 2.60 L4.50 5.20 L2.25 6.50 L0.00 5.20 L0.00 2.60 Z M0.00 5.20 L2.25 6.50 L2.25 9.10 L0.00 10.40 L-2.25 9.10 L-2.25 6.50 Z M4.50 5.20 L6.75 6.50 L6.75 9.10 L4.50 10.40 L2.25 9.10 L2.25 6.50 Z" fill="none" stroke="#b4b4bc" stroke-width="0.7" opacity="0.85"/></pattern>
+    </defs>
+    <!-- corpo e moldura de aço -->
+    <path d="M6 8 H94 L86 32 H61 V80 L50 94 L39 80 V32 H14 Z" fill="url(#corpo)" stroke="url(#aco)" stroke-width="3" stroke-linejoin="round"/>
+    <!-- miolo em colmeia -->
+    <path d="M15.5 15 H84.5 L80.5 26 H55 V77.5 L50 84 L45 77.5 V26 H19.5 Z" fill="url(#fundoHex)"/>
+    <path d="M15.5 15 H84.5 L80.5 26 H55 V77.5 L50 84 L45 77.5 V26 H19.5 Z" fill="url(#colmeia)"/>
+    <!-- filete laranja (assinatura Kitchen) -->
+    <path d="M15.5 15 H84.5 L80.5 26 H55 V77.5 L50 84 L45 77.5 V26 H19.5 Z" fill="none" stroke="#ff6600" stroke-width="1.4" stroke-linejoin="round"/>
   </g>
-
-  <!-- ================= TIPOGRAFIA HIGH-TECH (TESLA / THRICOMA DNA) ================= -->
-  <g transform="translate(86, 26)">
-    <!-- TICO (Ultra-Bold, Angular, Espaçamento Geométrico) -->
-    <text x="0" y="24" 
-          font-family="'Inter', system-ui, -apple-system, sans-serif" 
-          font-size="28" 
-          font-weight="900" 
-          letter-spacing="3" 
-          fill="#ffffff">
-      TICO
-    </text>
-
-    <!-- LAB (Fine / Light, Geometria Limpa) -->
-    <text x="88" y="24" 
-          font-family="'Inter', system-ui, -apple-system, sans-serif" 
-          font-size="28" 
-          font-weight="300" 
-          letter-spacing="4" 
-          fill="#e2e8f0">
-      LAB
-    </text>
-
-    <!-- KITCHEN (Laranja Thricoma #ff6600, Bold Tecnológico) -->
-    <text x="172" y="24" 
-          font-family="'Inter', system-ui, -apple-system, sans-serif" 
-          font-size="28" 
-          font-weight="800" 
-          letter-spacing="2.5" 
-          fill="#ff6600">
-      KITCHEN
-    </text>
-
-    <!-- Tagline de Engenharia Culinária (Monospace / Tracked 5px) -->
-    <text x="2" y="42" 
-          font-family="'Inter', ui-monospace, 'SF Mono', monospace" 
-          font-size="9" 
-          font-weight="700" 
-          letter-spacing="4.5" 
-          fill="#71717a">
-      PRECISÃO &amp; ENGENHARIA GASTRONÔMICA
-    </text>
+  <g font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#fff">
+    <text x="130" y="66" font-size="40" font-weight="800" letter-spacing="2">TICO <tspan font-weight="300">LAB</tspan> <tspan fill="#ff6600">KITCHEN</tspan></text>
+    <text x="132" y="92" font-size="12.5" font-weight="500" letter-spacing="4" fill="#a1a1aa">PRECISÃO &amp; ENGENHARIA GASTRONÔMICA</text>
   </g>
 </svg>
