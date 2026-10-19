@@ -5,9 +5,12 @@
   "titulo": "Spaghetti alla Carbonara Autêntico",
   "resumo": "O cânone romano executado por equilíbrio térmico: renderização de lipídios do guanciale e emulsão de carbocreme estritamente fora do fogo (<65°C) com água rica em amido liberado.",
   "descricao": "O clássico romano com guanciale curado, queijo finamente ralado, pimenta tostada e emulsão acetinada gerada pelo calor residual.",
-  "prep": "10 min",
+  "prep": "~20 min",
   "espera": "0 min",
-  "rendimento": {"texto": "2 porções generosas", "curto": "2 PORÇÕES"},
+  "rendimento": {
+    "texto": "2 porções generosas",
+    "curto": "2 PORÇÕES"
+  },
   "card_meta": "rendimento",
   "imagem_placeholder": "[Inserir foto do spaghetti alla carbonara aqui]",
   "ingredientes": [
@@ -18,12 +21,33 @@
     "Pimenta preta em grãos moída na hora a gosto"
   ],
   "passos": [
-    {"titulo": "Dourar o Guanciale", "texto": "Disponha o guanciale em uma frigideira fria. Ligue em fogo médio-baixo para extrair a gordura com calma. Deixe dourar até que as bordas fiquem crocantes e o centro macio (cerca de 7 a 8 minutos). Retire os pedaços com uma escumadeira e reserve, mantendo a gordura morna na panela."},
-    {"titulo": "A Carbocreme", "texto": "Em uma tigela de inox ou vidro temperado, bata as 4 gemas com o queijo Parmigiano-Reggiano ralado e bastante pimenta preta moída. Misture com um batedor de arame até formar uma pasta densa, rica e aveludada."},
-    {"titulo": "Cocção do Espaguete", "texto": "Em uma panela com água fervente e pouco sal (o guanciale e o queijo já aportam muito sódio), cozinhe o espaguete até 2 minutos antes do ponto indicado para \"al dente\". Guarde uma concha da água do cozimento."},
-    {"titulo": "Mantecatura com Lipídios", "texto": "Transfira a massa diretamente para a frigideira contendo a gordura do guanciale. Adicione meia concha de água rica em amido do cozimento e salteie vigorosamente em fogo baixo por 1 minuto para revestir os fios."},
-    {"titulo": "Emulsão Fora do Fogo", "texto": "Retire a frigideira completamente da fonte de calor e aguarde 30 a 40 segundos para estabilizar a temperatura abaixo de 65°C. Despeje a carbocreme sobre o espaguete."},
-    {"titulo": "Agitação e Crema", "texto": "Mexa continuamente com uma pinça de silicone, erguendo a massa em movimentos circulares para incorporar ar e emulsificar as gemas à gordura e ao amido. Se necessário, junte algumas colheres de água morna da cocção até atingir um molho cremoso, espelhado e uniforme, sem talhar."},
-    {"titulo": "Finalização", "texto": "Adicione o guanciale crocante, reserve algumas tiras para topo, e emprate em louça aquecida. Finalize com mais queijo ralado e outra camada de pimenta moída na hora."}
+    {
+      "titulo": "Dourar o Guanciale",
+      "texto": "Disponha o guanciale em uma frigideira fria. Ligue em fogo médio-baixo para extrair a gordura com calma. Deixe dourar até que as bordas fiquem crocantes e o centro macio (cerca de 7 a 8 minutos). Retire os pedaços com uma escumadeira e reserve, mantendo a gordura morna na panela."
+    },
+    {
+      "titulo": "A Carbocreme",
+      "texto": "Em uma tigela de inox ou vidro temperado, bata as 4 gemas com o queijo Parmigiano-Reggiano ralado e bastante pimenta preta moída. Misture com um batedor de arame até formar uma pasta densa, rica e aveludada."
+    },
+    {
+      "titulo": "Cocção do Espaguete",
+      "texto": "Em uma panela com água fervente e pouco sal (o guanciale e o queijo já aportam muito sódio), cozinhe o espaguete até 2 minutos antes do ponto indicado para \"al dente\". Guarde uma concha da água do cozimento."
+    },
+    {
+      "titulo": "Mantecatura com Lipídios",
+      "texto": "Transfira a massa diretamente para a frigideira contendo a gordura do guanciale. Adicione meia concha de água rica em amido do cozimento e salteie vigorosamente em fogo baixo por 1 minuto para revestir os fios."
+    },
+    {
+      "titulo": "Emulsão Fora do Fogo",
+      "texto": "Retire a frigideira completamente da fonte de calor e aguarde 30 a 40 segundos para estabilizar a temperatura abaixo de 65°C. Despeje a carbocreme sobre o espaguete."
+    },
+    {
+      "titulo": "Agitação e Crema",
+      "texto": "Mexa continuamente com uma pinça de silicone, erguendo a massa em movimentos circulares para incorporar ar e emulsificar as gemas à gordura e ao amido. Se necessário, junte algumas colheres de água morna da cocção até atingir um molho cremoso, espelhado e uniforme, sem talhar."
+    },
+    {
+      "titulo": "Finalização",
+      "texto": "Adicione o guanciale crocante, reserve algumas tiras para topo, e emprate em louça aquecida. Finalize com mais queijo ralado e outra camada de pimenta moída na hora."
+    }
   ]
 }

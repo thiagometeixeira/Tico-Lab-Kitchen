@@ -8,26 +8,51 @@
   "descricao": "Pudim extremamente liso de textura delicada e sem cheiro de ovo, assado em banho-maria com temperatura controlada.",
   "prep": "15 min",
   "forno": "~1h30",
-  "espera": {"texto": "4h+ (Geladeira)", "curto": "4H+"},
+  "espera": {
+    "texto": "4h+ (Geladeira)",
+    "curto": "4H+"
+  },
+  "rendimento": "1 forma de pudim",
   "card_meta": "espera",
   "imagem_placeholder": "[Inserir foto do pudim caramelizado aqui]",
   "ingredientes": [
-    {"grupo": "Massa do Pudim", "itens": [
-      "1 lata de Leite condensado",
-      "2 medidas de Leite (usar a lata como medida)",
-      "3 Ovos inteiros",
-      "1 Gema extra",
-      "1 colher (chá) de Essência de baunilha"
-    ]},
-    {"grupo": "Calda", "itens": [
-      "1 xícara de Açúcar"
-    ]}
+    {
+      "grupo": "Massa do Pudim",
+      "itens": [
+        "1 lata de Leite condensado",
+        "2 medidas de Leite (usar a lata como medida)",
+        "3 Ovos inteiros",
+        "1 Gema extra",
+        "1 colher (chá) de Essência de baunilha"
+      ]
+    },
+    {
+      "grupo": "Calda",
+      "itens": [
+        "1 xícara de Açúcar"
+      ]
+    }
   ],
   "passos": [
-    {"titulo": "Calda (Caramelização)", "texto": "Coloque o açúcar em uma panela e leve ao fogo até derreter e formar um caramelo dourado uniforme. Espalhe cuidadosamente no fundo e nas laterais da forma."},
-    {"titulo": "Homogeneização Expressa", "texto": "No liquidificador, adicione o leite condensado, o leite, os ovos, a gema e a essência de baunilha. Bata por **apenas 30 segundos**. *(Protocolo Tico Lab: Quanto menos bater, mais liso fica o pudim).*"},
-    {"titulo": "Filtragem (Protocolo Inodoro)", "texto": "Coe a mistura líquida em uma peneira fina diretamente sobre a forma caramelizada. Isso remove as películas das gemas e impede o cheiro residual de ovo, garantindo uma textura delicada."},
-    {"titulo": "Cocção Controlada (Banho-maria)", "texto": "Cubra a forma de pudim com papel alumínio. Asse em banho-maria no forno a 180°C por cerca de 1h20 a 1h40. O pudim estará pronto quando as bordas estiverem firmes e o centro ainda balançar levemente."},
-    {"titulo": "Estabilização a Frio", "texto": "Retire do forno e aguarde esfriar em temperatura ambiente. Em seguida, leve à geladeira por no mínimo 4 horas antes de desenformar."}
+    {
+      "titulo": "Calda (Caramelização)",
+      "texto": "Coloque o açúcar em uma panela e leve ao fogo até derreter e formar um caramelo dourado uniforme. Espalhe cuidadosamente no fundo e nas laterais da forma."
+    },
+    {
+      "titulo": "Homogeneização Expressa",
+      "texto": "No liquidificador, adicione o leite condensado, o leite, os ovos, a gema e a essência de baunilha. Bata por **apenas 30 segundos**. *(Protocolo Tico Lab: Quanto menos bater, mais liso fica o pudim).*"
+    },
+    {
+      "titulo": "Filtragem (Protocolo Inodoro)",
+      "texto": "Coe a mistura líquida em uma peneira fina diretamente sobre a forma caramelizada. Isso remove as películas das gemas e impede o cheiro residual de ovo, garantindo uma textura delicada."
+    },
+    {
+      "titulo": "Cocção Controlada (Banho-maria)",
+      "texto": "Cubra a forma de pudim com papel alumínio. Asse em banho-maria no forno a 180°C por cerca de 1h20 a 1h40. O pudim estará pronto quando as bordas estiverem firmes e o centro ainda balançar levemente."
+    },
+    {
+      "titulo": "Estabilização a Frio",
+      "texto": "Retire do forno e aguarde esfriar em temperatura ambiente. Em seguida, leve à geladeira por no mínimo 4 horas antes de desenformar."
+    }
   ]
 }

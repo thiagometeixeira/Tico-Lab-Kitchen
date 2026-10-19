@@ -3,45 +3,95 @@
   "categoria": "paes-e-fermentacao",
   "ordem": 5,
   "titulo": "Focaccia de Fermentação Natural",
-  "titulo_card": "Focaccia (Levain)",
-  "tag_pagina": "Pães & Fermentação",
-  "resumo": "Massa de alta hidratação baseada no sourdough, enriquecida com azeite. Fermentação a frio e segunda fermentação direta na assadeira para crosta frita e alvéolos largos.",
+  "resumo": "Massa de hidratação ampliada baseada no sourdough, enriquecida com azeite. Fermentação a frio e segunda fermentação direta na assadeira para crosta frita e alvéolos largos.",
   "descricao": "Baseada na fórmula do sourdough clássico, porém com hidratação ampliada e emulsão de azeite extra virgem. Assada em assadeira com poças de azeite para uma base frita e interior super alveolado.",
-  "prep": {"texto": "~3h (Ativo)", "curto": "40MIN"},
-  "espera": {"texto": "12h a 24h", "curto": "18H+"},
-  "forno": "25 min",
+  "prep": {
+    "texto": "40 min (ativo)",
+    "curto": "40 MIN"
+  },
+  "espera": {
+    "texto": "18h+ (inclui no mínimo 12h de geladeira)",
+    "curto": "18H+"
+  },
+  "forno": "20 a 25 min",
+  "rendimento": "1 assadeira",
   "card_meta": "espera",
   "imagem_placeholder": "[Inserir foto da Focaccia assada aqui]",
   "ingredientes": [
-    {"grupo": "A Massa (Base Sourdough)", "itens": [
-      "500g de Farinha (50g de integral e 450g de branca)",
-      "320g de Água (300g na autólise + 20g para diluir o sal)",
-      "150g de Levain ativo",
-      "12g de Sal",
-      "25ml de Azeite extra virgem (para a massa)"
-    ]},
-    {"grupo": "Para Assar (Cobertura)", "itens": [
-      "Azeite extra virgem abundante (para untar e pincelar)",
-      "Sal grosso ou flor de sal",
-      "Alecrim fresco"
-    ]}
+    {
+      "grupo": "A Massa (Base Sourdough)",
+      "itens": [
+        "500g de Farinha (50g de integral e 450g de branca)",
+        "320g de Água (300g na autólise + 20g para diluir o sal)",
+        "150g de Levain ativo",
+        "12g de Sal",
+        "25ml de Azeite extra virgem (para a massa)"
+      ]
+    },
+    {
+      "grupo": "Para Assar (Cobertura)",
+      "itens": [
+        "Azeite extra virgem abundante (para untar e pincelar)",
+        "Sal grosso ou flor de sal",
+        "Alecrim fresco"
+      ]
+    }
   ],
   "titulo_processo": "O Processo (Cronograma)",
   "passos": [
-    {"grupo": "Dia 1: A Massa e Retardo a Frio", "itens": [
-      {"titulo": "Autólise e Mistura", "texto": "Siga a base do sourdough: misture as farinhas com 300g de água. Após a autólise, incorpore o levain."},
-      {"titulo": "Sal, Água e Emulsão", "texto": "Adicione os 12g de sal e os 20g de água restantes. Após a absorção completa e desenvolvimento do glúten, adicione os 25ml de azeite e bata até que a massa fique lisa, homogênea e elástica."},
-      {"titulo": "Dobras", "texto": "Faça menos dobras que o sourdough clássico (apenas 2 a 3 séries de dobras)."},
-      {"titulo": "Descanso Inicial", "texto": "Aguarde 1 hora em temperatura ambiente após a última dobra."},
-      {"titulo": "Retardo a Frio", "texto": "Deixe a massa na própria tigela de inox (ou recipiente coberto) e leve direto à geladeira por no mínimo 12 horas."}
-    ]},
-    {"grupo": "Dia 2: Modelagem e Cocção", "itens": [
-      {"titulo": "Aclimatação Térmica", "texto": "Retire a tigela da geladeira e deixe a massa chegar à temperatura ambiente (leva aproximadamente 2 horas)."},
-      {"titulo": "Transferência", "texto": "Unte uma assadeira metálica com *bastante* azeite. Dê uma leve dobra na massa dentro da tigela e transfira-a para a assadeira."},
-      {"titulo": "Acomodação (Primeiro Toque)", "texto": "Dê uma leve ajeitada na massa para que ela fique a uns 2 a 3 dedos de distância da borda da assadeira. Pincele a superfície com azeite e cubra com plástico filme."},
-      {"titulo": "Fermentação Final", "texto": "Deixe fermentar por 3 a 4 horas em temperatura ambiente. A massa vai relaxar e se moldar preenchendo (ou chegando muito perto) das bordas da assadeira."},
-      {"titulo": "Dimpling", "texto": "Pré-aqueça o forno na temperatura máxima. Descubra a massa, pincele mais azeite e afunde as pontas dos dedos vigorosamente para criar as cavidades clássicas da focaccia. Jogue o sal grosso e o alecrim."},
-      {"titulo": "Forno", "texto": "Mande para o forno muito quente. Asse por 20 a 25 minutos até dourar intensamente no topo e fritar a base no azeite."}
-    ]}
+    {
+      "grupo": "Dia 1: A Massa e Retardo a Frio",
+      "itens": [
+        {
+          "titulo": "Autólise e Mistura",
+          "texto": "Siga a base do sourdough: misture as farinhas com 300g de água e deixe descansar 1 hora. Após a autólise, incorpore o levain."
+        },
+        {
+          "titulo": "Sal, Água e Emulsão",
+          "texto": "Adicione os 12g de sal e os 20g de água restantes. Após a absorção completa e desenvolvimento do glúten, adicione os 25ml de azeite e bata até que a massa fique lisa, homogênea e elástica."
+        },
+        {
+          "titulo": "Dobras",
+          "texto": "Faça menos dobras que o sourdough clássico (apenas 2 a 3 séries de dobras)."
+        },
+        {
+          "titulo": "Descanso Inicial",
+          "texto": "Aguarde 1 hora em temperatura ambiente após a última dobra."
+        },
+        {
+          "titulo": "Retardo a Frio",
+          "texto": "Deixe a massa na própria tigela de inox (ou recipiente coberto) e leve direto à geladeira por no mínimo 12 horas."
+        }
+      ]
+    },
+    {
+      "grupo": "Dia 2: Modelagem e Cocção",
+      "itens": [
+        {
+          "titulo": "Aclimatação Térmica",
+          "texto": "Retire a tigela da geladeira e deixe a massa chegar à temperatura ambiente (leva aproximadamente 2 horas)."
+        },
+        {
+          "titulo": "Transferência",
+          "texto": "Unte uma assadeira metálica com *bastante* azeite. Dê uma leve dobra na massa dentro da tigela e transfira-a para a assadeira."
+        },
+        {
+          "titulo": "Acomodação (Primeiro Toque)",
+          "texto": "Dê uma leve ajeitada na massa para que ela fique a uns 2 a 3 dedos de distância da borda da assadeira. Pincele a superfície com azeite e cubra com plástico filme."
+        },
+        {
+          "titulo": "Fermentação Final",
+          "texto": "Deixe fermentar por 3 a 4 horas em temperatura ambiente. A massa vai relaxar e se moldar preenchendo (ou chegando muito perto) das bordas da assadeira."
+        },
+        {
+          "titulo": "Dimpling",
+          "texto": "Pré-aqueça o forno na temperatura máxima. Descubra a massa, pincele mais azeite e afunde as pontas dos dedos vigorosamente para criar as cavidades clássicas da focaccia. Jogue o sal grosso e o alecrim."
+        },
+        {
+          "titulo": "Forno",
+          "texto": "Mande para o forno muito quente. Asse por 20 a 25 minutos até dourar intensamente no topo e fritar a base no azeite."
+        }
+      ]
+    }
   ]
 }

@@ -3,27 +3,53 @@
   "categoria": "paes-e-fermentacao",
   "ordem": 4,
   "titulo": "Sourdough Clássico",
-  "resumo": "Fórmula base de fermentação biológica selvagem com 70% de hidratação e farinha forte (W > 300). Retardo a frio de 16h em 4°C e cocção sob câmara de vapor em Dutch oven a 250°C.",
-  "descricao": "Fórmula base de fermentação natural com 70% de hidratação, assado em Dutch oven de ferro fundido.",
-  "prep": {"texto": "~11h", "curto": "30MIN"},
-  "espera": {"texto": "12h+", "curto": "24H"},
+  "resumo": "Fórmula base de fermentação biológica selvagem com ~65% de hidratação e farinha forte (W > 300). Retardo a frio de no mínimo 12h e cocção sob câmara de vapor em Dutch oven a 280°C.",
+  "descricao": "Fórmula base de fermentação natural com ~65% de hidratação (contando o levain a 100%), assado em Dutch oven de ferro fundido.",
+  "prep": {
+    "texto": "30 min (ativo)",
+    "curto": "30 MIN"
+  },
+  "espera": {
+    "texto": "24h+ (inclui no mínimo 12h de geladeira)",
+    "curto": "24H+"
+  },
   "rendimento": "1 filão (~960g)",
   "card_meta": "espera",
   "imagem_placeholder": "[Inserir foto do pão artesanal aqui]",
   "ingredientes": [
-    "500g de Farinha (50g de integral e 450g de branca)",
+    "500g de Farinha (50g de integral e 450g de branca forte, W > 300)",
     "300g de Água (usar 280g na autólise)",
     "150g de Levain",
     "12g de Sal"
   ],
-  "titulo_processo": "O Processo (Cronograma)",
   "passos": [
-    {"titulo": "08:30 - Refrescar o Levain", "texto": "Alimente sua isca para garantir que esteja no pico de atividade no horário da mistura."},
-    {"titulo": "12:30 - Autólise", "texto": "Misture as farinhas (branca e integral) usando somente 280g de água. Deixe descansar."},
-    {"titulo": "13:30 - Bater a Massa", "texto": "Bater de 3-4 min na velocidade 1 para misturar a autólise e o levain. Adicione o sal e o restante da água. Aumente para a velocidade 2 e deixe bater até completar 15 minutos totais. Por fim, bata mais 5 minutos na velocidade 3. Deixe descansar."},
-    {"titulo": "14:30 - Dobras", "texto": "Faça dobras a cada 30 minutos (máximo de 4 séries de dobras)."},
-    {"titulo": "18:00 - Pré-modelagem", "texto": "Boleie levemente a massa criando uma tensão inicial."},
-    {"titulo": "19:00 - Modelagem e Fermentação a Frio", "texto": "Modele a massa e transfira para o banneton. Coloque o banneton em um saco plástico e deixe fermentar em temperatura ambiente de 1 a 2 horas. Após isso, coloque na geladeira por no mínimo 12 horas."},
-    {"titulo": "Dia Seguinte - Assar", "texto": "Pré-aqueça o forno junto com a panela de ferro a 280°C por pelo menos 30 minutos. Transfira a massa para a panela e asse por 25 minutos com a tampa fechada (para gerar vapor). Após esse tempo, retire a tampa e deixe assar por mais ou menos 5 minutos, ou até atingir a caramelização desejada."}
+    {
+      "titulo": "Refrescar o Levain",
+      "texto": "Alimente sua isca e aguarde cerca de 4 horas, até que esteja no pico de atividade para a mistura."
+    },
+    {
+      "titulo": "Autólise",
+      "texto": "Misture as farinhas (branca e integral) usando somente 280g de água. Deixe descansar 1 hora."
+    },
+    {
+      "titulo": "Bater a Massa",
+      "texto": "Bater de 3-4 min na velocidade 1 para misturar a autólise e o levain. Adicione o sal e o restante da água. Aumente para a velocidade 2 e deixe bater até completar 15 minutos totais. Por fim, bata mais 5 minutos na velocidade 3. Deixe descansar cerca de 40 minutos."
+    },
+    {
+      "titulo": "Dobras e Fermentação em Bloco",
+      "texto": "Faça dobras a cada 30 minutos (máximo de 4 séries de dobras). Depois da última dobra, deixe a massa descansar em temperatura ambiente até completar cerca de 3h30 desde a primeira dobra."
+    },
+    {
+      "titulo": "Pré-modelagem",
+      "texto": "Boleie levemente a massa criando uma tensão inicial. Deixe descansar 1 hora."
+    },
+    {
+      "titulo": "Modelagem e Fermentação a Frio",
+      "texto": "Modele a massa e transfira para o banneton. Coloque o banneton em um saco plástico e deixe fermentar em temperatura ambiente de 1 a 2 horas. Após isso, coloque na geladeira por no mínimo 12 horas."
+    },
+    {
+      "titulo": "Assar (dia seguinte)",
+      "texto": "Pré-aqueça o forno junto com a panela de ferro a 280°C por pelo menos 30 minutos. Transfira a massa para a panela e asse por 25 minutos com a tampa fechada (para gerar vapor). Após esse tempo, retire a tampa e deixe assar por mais ou menos 5 minutos, ou até atingir a caramelização desejada."
+    }
   ]
 }
