@@ -4,6 +4,7 @@
 Lê data/receitas/*.json (fonte de verdade) e gera:
   - receitas/<categoria>/<slug>.html
   - os cards do index.html, entre <!-- RECEITAS:INICIO --> e <!-- RECEITAS:FIM -->
+  - o total de receitas do hero, entre <!-- RECEITAS:TOTAL --> e <!-- /RECEITAS:TOTAL -->
 
 Uso:
   python build.py           # gera/atualiza os HTMLs
@@ -25,15 +26,16 @@ INDEX = RAIZ / "index.html"
 
 MARCADOR_INICIO = "<!-- RECEITAS:INICIO -->"
 MARCADOR_FIM = "<!-- RECEITAS:FIM -->"
+RE_TOTAL = re.compile(r"(<!-- RECEITAS:TOTAL -->).*?(<!-- /RECEITAS:TOTAL -->)", re.S)
 
-# Categorias conhecidas: pasta -> chave do filtro no index, nome no card, nome na página.
+# Categorias conhecidas: pasta -> chave do filtro no index e nome exibido (card e página).
 # O card e a tag da página já são exibidos em maiúsculas pelo CSS.
 CATEGORIAS = {
-    "proteinas-e-batch-prep": {"filtro": "proteinas", "card": "Proteínas & Batch Prep", "pagina": "Proteínas e Batch Prep"},
-    "massas-classicas": {"filtro": "massas", "card": "Massas Clássicas", "pagina": "Massas Clássicas"},
-    "molhos-e-conservas": {"filtro": "conservas", "card": "Molhos & Conservas", "pagina": "Molhos e Conservas"},
-    "paes-e-fermentacao": {"filtro": "paes", "card": "Pães & Fermentação", "pagina": "Pães e Fermentação"},
-    "sobremesas": {"filtro": "sobremesas", "card": "Sobremesas", "pagina": "Sobremesas"},
+    "proteinas-e-batch-prep": {"filtro": "proteinas", "nome": "Proteínas & Batch Prep"},
+    "massas-classicas": {"filtro": "massas", "nome": "Massas Clássicas"},
+    "molhos-e-conservas": {"filtro": "conservas", "nome": "Molhos & Conservas"},
+    "paes-e-fermentacao": {"filtro": "paes", "nome": "Pães & Fermentação"},
+    "sobremesas": {"filtro": "sobremesas", "nome": "Sobremesas"},
 }
 
 # Campos de metadado exibidos na página, na ordem em que aparecem no JSON.
@@ -43,7 +45,7 @@ ROTULO_CARD = {"prep": "PREP", "espera": "ESPERA", "forno": "FORNO", "rendimento
 
 OBRIGATORIOS = ["slug", "categoria", "titulo", "resumo", "descricao", "prep", "ingredientes", "passos", "card_meta"]
 CAMPOS_CONHECIDOS = set(OBRIGATORIOS) | set(CAMPOS_META) | {
-    "ordem", "destaque", "subtitulo", "titulo_card", "tag_pagina", "titulo_processo",
+    "ordem", "destaque", "subtitulo", "titulo_processo",
     "notas", "imagem", "imagem_placeholder",
 }
 
@@ -153,8 +155,7 @@ def valida(r, arquivo):
     desconhecidos = set(r) - CAMPOS_CONHECIDOS
     if desconhecidos:
         erros.append(f"campos desconhecidos: {sorted(desconhecidos)}")
-    for campo in ["slug", "titulo", "resumo", "descricao", "subtitulo", "titulo_card", "tag_pagina",
-                  "titulo_processo", "imagem", "imagem_placeholder"]:
+    for campo in ["slug", "titulo", "resumo", "descricao", "subtitulo", "titulo_processo", "imagem", "imagem_placeholder"]:
         if campo in r and not _str_nao_vazia(r[campo]):
             erros.append(f"campo '{campo}' deve ser texto não vazio")
     if "slug" in r and isinstance(r["slug"], str):
@@ -237,7 +238,7 @@ def _grupos(lista):
 
 def render_pagina(r):
     cat = CATEGORIAS[r["categoria"]]
-    tag = r.get("tag_pagina", cat["pagina"])
+    tag = cat["nome"]
     h1 = esc(r["titulo"])
     if r.get("subtitulo"):
         h1 += f' <span style="font-size: 0.6em; font-weight: normal; opacity: 0.8;">{esc(r["subtitulo"])}</span>'
@@ -273,7 +274,9 @@ def render_pagina(r):
             proc.append("                ")
             estilo = ' style="margin-top: 2rem;"' if n > 0 else ""
             proc.append(f"                <h3{estilo}>{esc(grupo)}</h3>")
-        start = f' start="{numero}"' if numero > 1 else ""
+        # O CSS numera via counter "step-counter" (reiniciado em cada <ol>), então
+        # start= sozinho não basta: o counter-reset continua a numeração entre grupos.
+        start = f' start="{numero}" style="counter-reset: step-counter {numero - 1};"' if numero > 1 else ""
         proc.append(f"                <ol{start}>")
         proc += [
             f"                    <li><strong>{inline(p['titulo'])}:</strong> {inline(p['texto'])}</li>"
@@ -337,13 +340,13 @@ def render_pagina(r):
 
 def render_card(n, r):
     cat = CATEGORIAS[r["categoria"]]
-    titulo = r.get("titulo_card") or (f"{r['titulo']} {r['subtitulo']}" if r.get("subtitulo") else r["titulo"])
+    titulo = f"{r['titulo']} {r['subtitulo']}" if r.get("subtitulo") else r["titulo"]
     campo, rotulo = normaliza_card_meta(r)
     return "\n".join([
         f"            <!-- Card {n}: {esc(titulo)} -->",
         f'            <article class="recipe-card" data-category="{cat["filtro"]}">',
         '                <div class="card-header">',
-        f'                    <span class="card-tag">{esc(cat["card"].upper())}</span>',
+        f'                    <span class="card-tag">{esc(cat["nome"].upper())}</span>',
         f'                    <h3 class="card-title">{esc(titulo)}</h3>',
         "                </div>",
         '                <div class="card-body">',
@@ -372,7 +375,11 @@ def render_index(receitas, atual):
         + cards
         + "\n\n            "
     )
-    return atual[:ini] + bloco + atual[fim:]
+    novo = atual[:ini] + bloco + atual[fim:]
+    novo, n = RE_TOTAL.subn(lambda m: f"{m.group(1)}{len(receitas):02d}{m.group(2)}", novo)
+    if n != 1:
+        raise ErroValidacao("index.html: marcadores <!-- RECEITAS:TOTAL --> / <!-- /RECEITAS:TOTAL --> ausentes ou duplicados")
+    return novo
 
 
 # --------------------------------------------------------------------------

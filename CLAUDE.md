@@ -8,7 +8,7 @@ Site estático de receitas (GitHub Pages). Não há framework nem dependências:
 data/receitas/<slug>.json   ← FONTE DE VERDADE de cada receita
 data/receitas/_modelo.json  ← modelo para novas receitas (ignorado pelo build)
 build.py                    ← gerador (python build.py / python build.py --check)
-index.html                  ← página inicial; os cards entre os marcadores são gerados
+index.html                  ← página inicial; os cards e o total de receitas do hero são gerados
 receitas/<categoria>/<slug>.html  ← páginas GERADAS (commitadas, pois o site é estático)
 css/style.css               ← único CSS do site
 assets/                     ← logo.svg e favicon.svg
@@ -17,7 +17,7 @@ assets/                     ← logo.svg e favicon.svg
 ## Regras
 
 1. **O JSON é a fonte de verdade.** Qualquer mudança de conteúdo de receita é feita em `data/receitas/<slug>.json`.
-2. **Os HTMLs de receita são gerados. Não edite à mão** `receitas/**/*.html` nem o trecho do `index.html` entre `<!-- RECEITAS:INICIO -->` e `<!-- RECEITAS:FIM -->`. O que estiver fora dos marcadores no `index.html` (hero, filtros, "DNA do Lab", rodapé) é editado à mão normalmente.
+2. **Os HTMLs de receita são gerados. Não edite à mão** `receitas/**/*.html` nem o trecho do `index.html` entre `<!-- RECEITAS:INICIO -->` e `<!-- RECEITAS:FIM -->` (nem o número entre `<!-- RECEITAS:TOTAL -->` e `<!-- /RECEITAS:TOTAL -->` no hero). O que estiver fora dos marcadores no `index.html` (hero, filtros, "DNA do Lab", rodapé) é editado à mão normalmente.
 3. **Nunca invente nem "melhore" conteúdo culinário** (quantidades, tempos, temperaturas, proporções, rendimentos, passos). Se algo parecer errado ou divergente, aponte e pergunte ao dono do repo; não escolha sozinho.
 4. O HTML gerado usa as classes existentes do `style.css`. Não mude o CSS para acomodar o gerador.
 5. Sempre rode `python build.py --check` antes de commitar. Ele falha se algum HTML estiver desatualizado em relação aos JSONs ou se existir página em `receitas/` sem JSON correspondente.
@@ -38,15 +38,13 @@ assets/                     ← logo.svg e favicon.svg
 | `categoria` | sim | Uma das pastas em `CATEGORIAS` no `build.py`: `proteinas-e-batch-prep`, `massas-classicas`, `molhos-e-conservas`, `paes-e-fermentacao`, `sobremesas`. Para criar categoria nova, adicione-a em `CATEGORIAS` e o botão de filtro no `index.html`. |
 | `titulo` | sim | Título da página (e do card). |
 | `subtitulo` | não | Complemento menor ao lado do título, ex.: `(Tipo Flã)`. O card mostra `titulo + subtitulo`. |
-| `titulo_card` | não | Título alternativo só para o card. |
-| `tag_pagina` | não | Sobrescreve o nome da categoria exibido na página. |
 | `resumo` | sim | Texto do card no index. |
 | `descricao` | sim | Texto de abertura da página. |
-| `prep`, `espera`, `forno`, `rendimento` | `prep` sim | Metadados da página. Cada um é um texto (`"40 min"`) ou `{"texto": "48h (cura mínima)", "curto": "48H"}`. **A ordem em que aparecem no JSON é a ordem na página.** |
+| `prep`, `espera`, `forno`, `rendimento` | `prep` sim | Metadados da página. Cada um é um texto (`"40 min"`) ou `{"texto": "48h (cura mínima)", "curto": "48H"}`. **A ordem em que aparecem no JSON é a ordem na página.** Convenção: `prep` = tempo de trabalho ativo; `espera` = tempo passivo total (descansos, fermentação, geladeira); `forno` = tempo de cocção. Card e página saem dos mesmos campos, então não podem divergir. |
 | `card_meta` | sim | Qual metadado aparece no card ao lado do PREP: `"espera"` ou `{"campo": "rendimento", "rotulo": "LOTE"}`. No card, o valor é o `curto` (se houver) ou o `texto` em maiúsculas. |
 | `ingredientes` | sim | Lista de textos, ou lista de grupos `{"grupo": "Massa", "itens": [...]}`. |
 | `titulo_processo` | não | Título da seção de passos (padrão: `O Processo`). |
-| `passos` | sim | Lista de `{"titulo", "texto"}`, ou grupos `{"grupo": "Dia 1", "itens": [...]}`. |
+| `passos` | sim | Lista de `{"titulo", "texto"}`, ou grupos `{"grupo": "Dia 1", "itens": [...]}` (a numeração continua entre grupos). Prefira durações ("deixe descansar 1 hora", "dobras a cada 30 min") a horários de relógio. |
 | `notas` | não | Lista de observações exibidas após os passos. |
 | `imagem` | não | Caminho a partir da raiz, ex.: `assets/fotos/pudim.jpg`. Sem ele, aparece o placeholder. |
 | `imagem_placeholder` | não | Texto do placeholder da foto. |
