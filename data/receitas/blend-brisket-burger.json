@@ -1,0 +1,30 @@
+{
+  "slug": "blend-brisket-burger",
+  "categoria": "proteinas-e-batch-prep",
+  "ordem": 1,
+  "titulo": "Blend de Hambúrguer de Brisket",
+  "resumo": "Moagem técnica de peito bovino com controle rígido de gordura (70/30). Protocolo de ultracongelação instantânea (flash freeze) para preservação de suculência e reação de Maillard em chapa a >230°C.",
+  "descricao": "Moagem técnica de peito bovino com balanço rigoroso de gordura, técnica de congelamento rápido para batch prep e selagem de crosta perfeita.",
+  "prep": "40 min",
+  "espera": "2h (congelamento)",
+  "rendimento": {"texto": "10 discos de 180g (ou 18 smash de 100g)", "curto": "10 UN"},
+  "card_meta": {"campo": "rendimento", "rotulo": "LOTE"},
+  "imagem_placeholder": "[Inserir foto do hambúrguer de brisket aqui]",
+  "ingredientes": [
+    "1,4 kg de Peito bovino limpo (Brisket Flat / carne magra)",
+    "600 g de Ponta do peito ou gordura de cobertura (Brisket Point / gordura)",
+    "Sal de parrilla ou sal kosher a gosto (somente na chapa)",
+    "Pimenta-do-reino moída na hora a gosto",
+    "Manteiga clarificada ou banha de boi (tallow) para a chapa",
+    "Discos de papel manteiga antiaderente para separação"
+  ],
+  "passos": [
+    {"titulo": "Proporção e Limpeza", "texto": "Remova as películas prateadas rígidas (silver skin) da carne. Pese as partes para atingir a proporção ideal de 70% a 75% de carne magra (flat) e 25% a 30% de gordura (point). Corte em cubos uniformes de 2 a 3 cm."},
+    {"titulo": "Controle Térmico Crítico", "texto": "Leve os cubos de carne e todas as peças metálicas do moedor (bocal, caracol, cruzeta e disco) ao congelador por 30 a 40 minutos (-2°C a 0°C). A gordura deve estar quase congelada para não derreter pelo atrito (\"fat smearing\") e comprometer a liga."},
+    {"titulo": "Moagem Única", "texto": "Moa o conjunto intercalando carne e gordura em disco médio-grosso (8 mm a 10 mm) em passagem única. Jamais passe a carne duas vezes para preservar os grumos e a aeração da fibra muscular."},
+    {"titulo": "Pesagem e Modelagem Gentil", "texto": "Pese porções de 180g (ou 90-100g para smash burgers). Molde os discos com as mãos em toques leves e circulares, compactando apenas o suficiente para dar formato estrutural. Faça uma leve concavidade central com o polegar para neutralizar o estufamento do disco na cocção."},
+    {"titulo": "Batch Prep e Flash Freeze", "texto": "Alinhe os discos em assadeira forrada, separando cada hambúrguer com papel manteiga. Leve ao congelador aberto por 2 horas (congelamento rápido). Transfira as unidades já rígidas para sacos herméticos ou embalagem a vácuo. Validade de até 3 meses sem perda de umidade."},
+    {"titulo": "Chapa Vulcânica e Salga Tardia", "texto": "Aqueça a chapa de ferro fundido ou aço carbono até atingir ponto de fumaça (>230°C). Nunca adicione sal na mistura moída com antecedência, pois o sódio dissolve a miosina e deixa o burger emborrachado. Tempere a superfície com sal e pimenta imediatamente antes de colocar na chapa."},
+    {"titulo": "Cocção e Reação de Maillard", "texto": "Doure o primeiro lado por 3 a 4 minutos até criar uma crosta escura e crocante. Vire uma única vez, coloque o queijo para derreter e cozinhe por mais 2 minutos (54°C a 57°C para ponto médio suculento). Descanse 2 minutos sobre grade antes de montar."}
+  ]
+}
