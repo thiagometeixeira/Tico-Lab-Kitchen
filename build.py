@@ -187,22 +187,22 @@ def valida(r, arquivo):
     if "passos" in r:
         _valida_lista_ou_grupos("passos", r["passos"], _valida_passo, erros)
     if erros:
-        raise ErroValidacao(f"{arquivo.relative_to(RAIZ)}:\n  - " + "\n  - ".join(erros))
+        raise ErroValidacao(f"{arquivo.relative_to(RAIZ).as_posix()}:\n  - " + "\n  - ".join(erros))
 
 
 def carrega_receitas():
     receitas, erros, slugs = [], [], {}
     arquivos = sorted(p for p in DIR_DADOS.glob("*.json") if not p.name.startswith("_"))
     if not arquivos:
-        raise ErroValidacao(f"nenhuma receita encontrada em {DIR_DADOS.relative_to(RAIZ)}")
+        raise ErroValidacao(f"nenhuma receita encontrada em {DIR_DADOS.relative_to(RAIZ).as_posix()}")
     for arq in arquivos:
         try:
             r = json.loads(arq.read_text(encoding="utf-8"))
         except json.JSONDecodeError as e:
-            erros.append(f"{arq.relative_to(RAIZ)}: JSON inválido (linha {e.lineno}, coluna {e.colno}): {e.msg}")
+            erros.append(f"{arq.relative_to(RAIZ).as_posix()}: JSON inválido (linha {e.lineno}, coluna {e.colno}): {e.msg}")
             continue
         except UnicodeDecodeError:
-            erros.append(f"{arq.relative_to(RAIZ)}: arquivo não está em UTF-8")
+            erros.append(f"{arq.relative_to(RAIZ).as_posix()}: arquivo não está em UTF-8")
             continue
         try:
             valida(r, arq)

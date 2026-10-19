@@ -1,0 +1,29 @@
+{
+  "slug": "nome-da-receita",
+  "categoria": "paes-e-fermentacao",
+  "ordem": 99,
+  "titulo": "Nome da Receita",
+  "resumo": "Texto curto do card no index (1 a 2 frases).",
+  "descricao": "Texto de abertura da página da receita.",
+  "prep": "00 min",
+  "espera": {"texto": "00h (descrição)", "curto": "00H"},
+  "rendimento": "0 unidades",
+  "card_meta": "espera",
+  "imagem_placeholder": "[Inserir foto da receita aqui]",
+  "ingredientes": [
+    {"grupo": "Grupo 1", "itens": [
+      "000g de Ingrediente",
+      "000g de Ingrediente"
+    ]},
+    {"grupo": "Grupo 2", "itens": [
+      "000g de Ingrediente"
+    ]}
+  ],
+  "passos": [
+    {"titulo": "Título do passo", "texto": "Descrição do passo."},
+    {"titulo": "Título do passo", "texto": "Descrição do passo."}
+  ],
+  "notas": [
+    "Observação opcional (remova o campo se não houver)."
+  ]
+}
