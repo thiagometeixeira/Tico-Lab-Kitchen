@@ -303,22 +303,41 @@ a:hover {
 }
 
 /* Foto da Receita */
+/* A foto aparece inteira (sem corte) e centralizada no quadro; o fundo é a
+   própria foto desfocada e escurecida, para fotos verticais não deixarem faixas vazias. */
 .receita-foto {
+    position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
     max-height: 480px;
     margin: 0 0 3rem 0;
+    padding: 1.25rem;
     border: 1px solid var(--border-dark);
     border-radius: var(--radius-lg);
     overflow: hidden;
     background-color: var(--black-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.receita-foto img {
-    width: 100%;
-    height: 100%;
+.receita-foto-fundo {
+    position: absolute;
+    inset: -10%;
+    width: 120%;
+    height: 120%;
     object-fit: cover;
+    filter: blur(28px) brightness(0.35) saturate(1.2);
+}
+
+.receita-foto-img {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
     display: block;
+    border-radius: var(--radius-md);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
 }
 
 /* Placeholder de Imagem Industrial */
@@ -982,6 +1001,12 @@ a:hover {
 }
 
 @media (max-width: 640px) {
+    /* No celular o quadro fica menos achatado para a foto não ficar pequena */
+    .receita-foto {
+        aspect-ratio: 4 / 3;
+        padding: 0.75rem;
+    }
+
     .header-container {
         padding: 0.8rem 1.25rem;
     }
