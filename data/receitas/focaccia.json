@@ -16,6 +16,7 @@
   "forno": "20 a 25 min",
   "rendimento": "1 assadeira",
   "card_meta": "espera",
+  "imagem": "assets/fotos/focaccia.jpg",
   "imagem_placeholder": "[Inserir foto da Focaccia assada aqui]",
   "ingredientes": [
     {

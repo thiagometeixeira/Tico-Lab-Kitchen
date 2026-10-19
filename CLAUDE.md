@@ -12,6 +12,7 @@ index.html                  ← página inicial; os cards e o total de receitas 
 receitas/<categoria>/<slug>.html  ← páginas GERADAS (commitadas, pois o site é estático)
 css/style.css               ← único CSS do site
 assets/                     ← logo.svg (marca completa, uso externo) e favicon.svg
+assets/fotos/<slug>.jpg      ← fotos das receitas (máx. 1600px, JPEG ~82%, sem metadados EXIF)
 ```
 
 ## Regras

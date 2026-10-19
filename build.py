@@ -252,9 +252,9 @@ def render_pagina(r):
     imagem = []
     if r.get("imagem"):
         imagem = [
-            "        <div class=\"imagem-placeholder\">",
-            f'            <img src="../../{esc_attr(r["imagem"])}" alt="{esc_attr(r["titulo"])}">',
-            "        </div>",
+            "        <figure class=\"receita-foto\">",
+            f'            <img src="../../{esc_attr(r["imagem"])}" alt="{esc_attr(r["titulo"])}" loading="lazy">',
+            "        </figure>",
             "",
         ]
 

@@ -302,6 +302,25 @@ a:hover {
     letter-spacing: 1px;
 }
 
+/* Foto da Receita */
+.receita-foto {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 480px;
+    margin: 0 0 3rem 0;
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: var(--black-card);
+}
+
+.receita-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 /* Placeholder de Imagem Industrial */
 .imagem-placeholder {
     width: 100%;
