@@ -11,7 +11,7 @@ build.py                    ← gerador (python build.py / python build.py --che
 index.html                  ← página inicial; os cards e o total de receitas do hero são gerados
 receitas/<categoria>/<slug>.html  ← páginas GERADAS (commitadas, pois o site é estático)
 css/style.css               ← único CSS do site
-assets/                     ← logo-mark.svg (emblema T, usado no cabeçalho e hero), logo.svg (marca completa, uso externo) e favicon.svg
+assets/                     ← logo.svg (marca completa, uso externo) e favicon.svg
 ```
 
 ## Regras

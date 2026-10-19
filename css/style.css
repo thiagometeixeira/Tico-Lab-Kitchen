@@ -126,19 +126,6 @@ a:hover {
     color: var(--text-white);
 }
 
-.brand-mark {
-    height: 52px;
-    width: 52px;
-    flex-shrink: 0;
-    filter: drop-shadow(0 0 10px rgba(255, 102, 0, 0.25));
-    transition: filter var(--trans-smooth), transform var(--trans-smooth);
-}
-
-.brand-link:hover .brand-mark {
-    filter: drop-shadow(0 0 14px rgba(255, 102, 0, 0.5));
-    transform: translateY(-1px);
-}
-
 .brand-text {
     display: flex;
     flex-direction: column;
@@ -978,11 +965,6 @@ a:hover {
 @media (max-width: 640px) {
     .header-container {
         padding: 0.8rem 1.25rem;
-    }
-
-    .brand-mark {
-        height: 42px;
-        width: 42px;
     }
 
     .brand-name {
