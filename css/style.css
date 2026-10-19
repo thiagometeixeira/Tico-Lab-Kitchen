@@ -9,23 +9,23 @@
    1. Variáveis & Tema (High-Tech Obsidian & Titanium)
    -------------------------------------------------------------------------- */
 :root {
-    /* Paleta Deep Space / Tesla Black */
-    --black-void: #000000;
-    --black-surface: #0a0a0c;
-    --black-card: #111114;
-    --black-card-hover: #16161a;
-    --black-subtle: #1c1c22;
+    /* Paleta Obsidian quente (pretos levemente puxados para o marrom) */
+    --black-void: #070605;
+    --black-surface: #0c0b0a;
+    --black-card: #13110f;
+    --black-card-hover: #191714;
+    --black-subtle: #201d1a;
     
     /* Linhas & Bordas Industriais */
-    --border-dark: #222228;
-    --border-light: #2e2e38;
+    --border-dark: #27231f;
+    --border-light: #35302b;
     --border-accent: rgba(255, 102, 0, 0.4);
 
     /* Textos */
     --text-white: #ffffff;
-    --text-silver: #d4d4d8;
-    --text-gray: #888892;
-    --text-dark-gray: #52525b;
+    --text-silver: #ddd7ce;
+    --text-gray: #9a948b;
+    --text-dark-gray: #86817a;
 
     /* Acento Thricoma / Tesla High-Tech */
     --orange-primary: #ff6600;
@@ -242,8 +242,8 @@ a:hover {
 
 .tag {
     display: inline-block;
-    background-color: var(--orange-subtle);
-    color: var(--orange-primary);
+    background-color: var(--black-subtle);
+    color: var(--text-silver);
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 700;
@@ -251,7 +251,7 @@ a:hover {
     letter-spacing: 2px;
     padding: 0.35rem 0.85rem;
     border-radius: var(--radius-sm);
-    border: 1px solid var(--border-accent);
+    border: 1px solid var(--border-light);
     margin-bottom: 1.25rem;
 }
 
@@ -296,7 +296,7 @@ a:hover {
 }
 
 .meta-item strong {
-    color: var(--orange-primary);
+    color: var(--text-white);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -308,7 +308,7 @@ a:hover {
     aspect-ratio: 16 / 7;
     min-height: 240px;
     max-height: 400px;
-    background: radial-gradient(circle at center, #141419 0%, #08080a 100%);
+    background: radial-gradient(circle at center, #16130f 0%, #090807 100%);
     border: 1px dashed var(--border-light);
     border-radius: var(--radius-lg);
     display: flex;
@@ -533,7 +533,7 @@ a:hover {
     font-weight: 700;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: var(--orange-primary);
+    color: var(--text-gray);
     margin-bottom: 1.5rem;
     display: block;
 }
@@ -626,7 +626,7 @@ a:hover {
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--orange-primary);
+    color: var(--text-gray);
     margin-bottom: 0.5rem;
 }
 
@@ -721,7 +721,7 @@ a:hover {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--orange-primary);
+    color: var(--text-gray);
     margin-bottom: 0.6rem;
     display: inline-block;
 }
@@ -837,7 +837,7 @@ a:hover {
     font-weight: 700;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: var(--orange-primary);
+    color: var(--text-gray);
     margin-bottom: 0.75rem;
     display: block;
 }
@@ -864,7 +864,7 @@ a:hover {
 .tech-card h3 {
     font-size: 1.25rem;
     font-weight: 800;
-    color: var(--orange-primary);
+    color: var(--text-white);
     letter-spacing: -0.5px;
     margin-bottom: 1rem;
 }
